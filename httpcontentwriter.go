@@ -19,7 +19,7 @@ func NewHttpContentWriter(w http.ResponseWriter) *HttpContentWriter {
 	}
 }
 
-func (h *HttpContentWriter) Write(p []byte) (n int, err error) {
+func (h *HttpContentWriter) Write(p []uint8) (n int, err error) {
 	isFirstWrite := false
 	h.mtx.Lock()
 	if h.isFirstWrite {

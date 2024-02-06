@@ -25,7 +25,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	contentWriter := httpcontentwriter.NewHttpContentWriter(w)
 
 	// Your logic here, writing content to the response using contentWriter
-	contentWriter.Write([]byte("Hello, World!"))
+	contentWriter.Write([]uint8("Hello, World!"))
 }
 
 func main() {
